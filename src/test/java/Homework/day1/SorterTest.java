@@ -7,7 +7,7 @@ import java.util.List;
 
 import static org.assertj.core.api.Assertions.assertThat;
 
-class Task2Test {
+class SorterTest {
     private static final List<String> UNSORTED = List.of("B", "a", "C", "A", "D", "b", "c", "d");
     private static final List<String> EXPECTED_RESULT = List.of("D", "d", "C", "c", "B", "b", "A", "a");
     @Test
