@@ -5,6 +5,7 @@ import org.junit.jupiter.api.Test;
 
 import java.time.LocalDate;
 import java.util.List;
+import java.util.Optional;
 
 import static org.assertj.core.api.Assertions.assertThat;
 import static org.junit.jupiter.api.Assertions.*;
@@ -67,9 +68,9 @@ class MethodsTest {
     @Test
     void shouldReturnCheaperProductFromComputersCategory(){
         //when
-        Product result = Methods.getCheaperProductFromComputersCategory(products);
+        Optional<Product> result = Methods.getCheaperProductFromComputersCategory(products);
         //then
-        assertThat(result).isEqualTo(product1);
+        assertThat(result).hasValue(product1);
     }
     @Test
     void shouldReturnAnyOrderFromBookCategory(){

@@ -57,5 +57,6 @@ public class Methods {
                 .map(Programmer::getProgrammingLanguages)
                 .distinct()
                 .count();
+
     }
 }
