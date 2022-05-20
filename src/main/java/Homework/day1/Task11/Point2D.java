@@ -45,4 +45,5 @@ public class Point2D implements Movable {
     public int hashCode() {
         return Objects.hash(x, y);
     }
+
 }

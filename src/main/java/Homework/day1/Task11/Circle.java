@@ -53,9 +53,9 @@ public double getArea(){
 
     @Override
     public void resize(double resizeFactor) {
-        double newXposition = (point.getX() - center.getX() * resizeFactor) + center.getX();
+        double newXposition = ((point.getX() - center.getX()) * resizeFactor) + center.getX();
         point.setX(newXposition);
-        double newYposition = (point.getY() - center.getY() * resizeFactor) + center.getY();
+        double newYposition = ((point.getY() - center.getY()) * resizeFactor) + center.getY();
         point.setY(newYposition);
     }
 }
