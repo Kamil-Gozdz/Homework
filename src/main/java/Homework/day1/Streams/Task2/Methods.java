@@ -55,7 +55,9 @@ public class Methods {
         return programmers.stream()
                 .filter(p -> p.getPerson().getSex().equals("Woman"))
                 .map(Programmer::getProgrammingLanguages)
+                .flatMap(List::stream)
                 .distinct()
                 .count();
+
     }
 }

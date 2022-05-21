@@ -1,10 +1,12 @@
 package Homework.day1.Task11;
 
+
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
 import static org.assertj.core.api.Assertions.assertThat;
-import static org.junit.jupiter.api.Assertions.*;
+import static org.assertj.core.api.Assertions.within;
+
 
 class CircleTest {
 private Circle circle;
@@ -30,10 +32,24 @@ void setUp (){
         assertThat(center).isEqualTo(expectedNewCenter);
     }
     @Test
-    void shouldReturnCorrectRadius (){
+    void shouldReturnCorrectRadius(){
         //when
         double result = circle.getRadius();
         //then
         assertThat(result).isEqualTo(16);
+    }
+    @Test
+    void shouldReturnCorrectPerimeter(){
+        //when
+        double result = circle.getPerimeter();
+        //then
+        assertThat(result).isCloseTo(100.53,within(1.0));
+    }
+    @Test
+    void shouldReturnCorrectArea(){
+        //when
+        double result = circle.getArea();
+        //then
+        assertThat(result).isCloseTo(804.25,within(1.0));
     }
 }

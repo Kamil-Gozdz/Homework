@@ -10,7 +10,6 @@ public class Sorter {
         Collections.sort(sorted, new Comparator<String>() {
             @Override
             public int compare(String o1, String o2) {
-                o1.compareTo(o2);
                 return o2.toLowerCase(Locale.ROOT).compareTo(o1.toLowerCase(Locale.ROOT));
             }
         });

@@ -3,8 +3,9 @@ package Homework.day1.Streams.Task3;
 import java.time.LocalDate;
 import java.util.Comparator;
 import java.util.List;
+import java.util.Optional;
 import java.util.stream.Collectors;
-import java.util.stream.DoubleStream;
+
 
 public class Methods {
 
@@ -20,10 +21,10 @@ public static List<Product> getProductsFromComputerCategoryWithDiscount(List<Pro
             .map(p -> new Product(p.getId(),p.getName(),p.getCategory(),p.getPrice()*0.8))
             .collect(Collectors.toList());
     }
-public static Product getCheaperProductFromComputersCategory (List<Product> products){
+public static Optional<Product> getCheaperProductFromComputersCategory (List<Product> products){
     return products.stream()
-            .filter(p -> p.getCategory().equals("Computers")).min(Comparator.comparing(Product::getPrice))
-            .get();
+            .filter(p -> p.getCategory().equals("Computers")).min(Comparator.comparing(Product::getPrice));
+
     }
 public static List<Order> getOrderList (List<Order> orders){
     return orders.stream()
